@@ -79,17 +79,26 @@
 
 
 
-<meta name="description" content="冯文议(Wenyi Feng),Java程序员。这里将记录Java、Spring、Spring Boot、Spring Cloud、MyBatis的学习笔记。">
+<meta name="description" content="Elasticsearch入门篇还记得大二的时候，初入Java大门，就大言不惭的给老师说，我要开发一个搜索引擎，结果是各种学习，各种找资料，终于在期末的时候，做出了一个简单新闻搜索页面，搜索模块是使用了Lucene。 今天，我们一起走进Elasticsearch的殿堂。 Elastic以Elastic之名进行交易的数据搜索软件初创公司Elastic search于2018年10月5日（美国时间）上">
 <meta name="keywords" content="冯文议,Wenyi Feng,fengwenyi,博客,编程,Java,Spring,Spring Boot,Spring Cloud,MyBatis">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Wenyi Feng&#39;s Blog">
-<meta property="og:url" content="https://fengwenyi.github.io/index.html">
+<meta property="og:url" content="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/index.html">
 <meta property="og:site_name" content="Wenyi Feng&#39;s Blog">
-<meta property="og:description" content="冯文议(Wenyi Feng),Java程序员。这里将记录Java、Spring、Spring Boot、Spring Cloud、MyBatis的学习笔记。">
+<meta property="og:description" content="Elasticsearch入门篇还记得大二的时候，初入Java大门，就大言不惭的给老师说，我要开发一个搜索引擎，结果是各种学习，各种找资料，终于在期末的时候，做出了一个简单新闻搜索页面，搜索模块是使用了Lucene。 今天，我们一起走进Elasticsearch的殿堂。 Elastic以Elastic之名进行交易的数据搜索软件初创公司Elastic search于2018年10月5日（美国时间）上">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/images/elastic_shangshi.jpg">
+<meta property="og:image" content="https://img4.mukewang.com/5b29422e0001072114610709.jpg">
+<meta property="og:image" content="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/images/elastic_index_1.png">
+<meta property="og:image" content="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/images/elastic_index_2.png">
+<meta property="og:image" content="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/images/elastic_c_verity_get.png">
+<meta property="og:image" content="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/images/elastic_test_demo_1.png">
+<meta property="og:image" content="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/images/elastic_test_demo_2.png">
+<meta property="og:updated_time" content="2019-03-03T15:35:54.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Wenyi Feng&#39;s Blog">
-<meta name="twitter:description" content="冯文议(Wenyi Feng),Java程序员。这里将记录Java、Spring、Spring Boot、Spring Cloud、MyBatis的学习笔记。">
+<meta name="twitter:description" content="Elasticsearch入门篇还记得大二的时候，初入Java大门，就大言不惭的给老师说，我要开发一个搜索引擎，结果是各种学习，各种找资料，终于在期末的时候，做出了一个简单新闻搜索页面，搜索模块是使用了Lucene。 今天，我们一起走进Elasticsearch的殿堂。 Elastic以Elastic之名进行交易的数据搜索软件初创公司Elastic search于2018年10月5日（美国时间）上">
+<meta name="twitter:image" content="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/images/elastic_shangshi.jpg">
 
 
 
@@ -119,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://fengwenyi.github.io/">
+  <link rel="canonical" href="https://fengwenyi.github.io/2019/02/26/Elasticsearch入门篇/">
 
 
 
 
 
-  <title>Wenyi Feng's Blog</title>
+  <title> | Wenyi Feng's Blog</title>
   
 
 
@@ -144,8 +153,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,155 +226,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fengwenyi.github.io/2019/03/02/first-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="冯文议 · Wenyi Feng">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wenyi Feng's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/02/first-blog/" itemprop="url">My First Blog——Hexo+Github搭建个人网站</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-02T03:54:44+08:00">
-                2019-03-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>终于用 hexo + github 搭建起自己的个人博客了，我的第一篇博文，就来记录一下搭建过程吧！</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="初始化Project"><a href="#初始化Project" class="headerlink" title="初始化Project"></a>初始化Project</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init [project]</span><br></pre></td></tr></table></figure>
-<h2 id="本地运行"><a href="#本地运行" class="headerlink" title="本地运行"></a>本地运行</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> [project]</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>他会告诉，可以访问：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>这里，说一下，仓库的名称格式很严格，规则为：<strong>[your github username].github.io</strong></p>
-<p>一定得是这样，否则你就跟我一样，慢慢折腾吧！</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>修改 <code>_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">[your</span> <span class="string">github</span> <span class="string">project</span> <span class="string">repository</span> <span class="string">git/url</span> <span class="string">address]</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<h2 id="发布到远程仓库"><a href="#发布到远程仓库" class="headerlink" title="发布到远程仓库"></a>发布到远程仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git remote add origin [your github repository git/url]</span><br><span class="line">git push -u origin master</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo g/generate</span><br><span class="line">hexo d/deploy</span><br></pre></td></tr></table></figure>
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><blockquote>
-<p>ERROR Deployer not found: git</p>
-</blockquote>
-<p>未执行 <strong>npm install hexo-deployer-git –save</strong> 命令</p>
-<blockquote>
-<p>页面不能正常显示，或者404</p>
-</blockquote>
-<p>我折腾了一下午，原因是：我随便取得名字。</p>
-<blockquote>
-<p>无法执行 hexo 命令</p>
-</blockquote>
-<p>运行 <code>hexo init [project]</code> 后，未执行：cd [project]。</p>
-<p>页面404，收到GitHub发的邮件，内容如下：</p>
-<blockquote>
-<p>The tag <code>fancybox</code> on line 77 in <code>themes/landscape/README.md</code> is not a recognized Liquid tag. For more information, see <a href="https://help.github.com/en/articles/page-build-failed-unknown-tag-error" target="_blank" rel="noopener">https://help.github.com/en/articles/page-build-failed-unknown-tag-error</a>.</p>
-</blockquote>
-<p>解决方案，see <a href="https://github.com/hexojs/hexo/issues/2590" target="_blank" rel="noopener">hexo github #2590</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -396,9 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/26/Elasticsearch入门篇/" itemprop="url">Untitled</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -448,9 +308,7 @@
       
 
       
-        
-          
-            <h1 id="Elasticsearch入门篇"><a href="#Elasticsearch入门篇" class="headerlink" title="Elasticsearch入门篇"></a>Elasticsearch入门篇</h1><p>还记得大二的时候，初入Java大门，就大言不惭的给老师说，我要开发一个搜索引擎，结果是各种学习，各种找资料，终于在期末的时候，做出了一个简单新闻搜索页面，搜索模块是使用了Lucene。</p>
+        <h1 id="Elasticsearch入门篇"><a href="#Elasticsearch入门篇" class="headerlink" title="Elasticsearch入门篇"></a>Elasticsearch入门篇</h1><p>还记得大二的时候，初入Java大门，就大言不惭的给老师说，我要开发一个搜索引擎，结果是各种学习，各种找资料，终于在期末的时候，做出了一个简单新闻搜索页面，搜索模块是使用了Lucene。</p>
 <p>今天，我们一起走进Elasticsearch的殿堂。</p>
 <h2 id="Elastic"><a href="#Elastic" class="headerlink" title="Elastic"></a>Elastic</h2><p>以Elastic之名进行交易的数据搜索软件初创公司Elastic search于2018年10月5日（美国时间）上市。</p>
 <p><img src="./images/elastic_shangshi.jpg" alt></p>
@@ -704,8 +562,6 @@
 <li><a href>Elasticsearch搜索专题篇</a></li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -722,12 +578,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/02/first-blog/" rel="prev" title="My First Blog——Hexo+Github搭建个人网站">
+                My First Blog——Hexo+Github搭建个人网站 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -737,10 +609,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -748,6 +621,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -768,8 +645,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -811,6 +697,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Elasticsearch入门篇"><span class="nav-number">1.</span> <span class="nav-text">Elasticsearch入门篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Elastic"><span class="nav-number">1.1.</span> <span class="nav-text">Elastic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elasticsearch"><span class="nav-number">1.2.</span> <span class="nav-text">Elasticsearch</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Elastic-Stack-的核心"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">Elastic Stack 的核心</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Elastic-Stack-的特点："><span class="nav-number">1.2.0.2.</span> <span class="nav-text">Elastic Stack 的特点：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础概念"><span class="nav-number">1.3.</span> <span class="nav-text">基础概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.4.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac-安装"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">Mac 安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker安装"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">docker安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pulling-the-image"><span class="nav-number">1.4.1.</span> <span class="nav-text">Pulling the image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-Elasticsearch-from-the-command-line"><span class="nav-number">1.4.2.</span> <span class="nav-text">Running Elasticsearch from the command line</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Development-modeedit"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">Development modeedit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CentOS安装"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">CentOS安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github"><span class="nav-number">1.4.2.3.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器插件"><span class="nav-number">1.4.2.4.</span> <span class="nav-text">浏览器插件</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#创建索引"><span class="nav-number">1.5.</span> <span class="nav-text">创建索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作CRUD"><span class="nav-number">1.6.</span> <span class="nav-text">基本操作CRUD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级查询"><span class="nav-number">1.7.</span> <span class="nav-text">高级查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#接口"><span class="nav-number">1.7.0.1.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关键字：query"><span class="nav-number">1.7.0.2.</span> <span class="nav-text">关键字：query</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用查询"><span class="nav-number">1.7.0.3.</span> <span class="nav-text">常用查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1、全文本匹配"><span class="nav-number">1.7.0.4.</span> <span class="nav-text">1、全文本匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#match-phrase"><span class="nav-number">1.7.0.5.</span> <span class="nav-text">match_phrase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多个字段查询"><span class="nav-number">1.7.0.6.</span> <span class="nav-text">多个字段查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语法查询"><span class="nav-number">1.7.0.7.</span> <span class="nav-text">语法查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字段级别的查询"><span class="nav-number">1.7.0.8.</span> <span class="nav-text">字段级别的查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#范围查询"><span class="nav-number">1.7.0.9.</span> <span class="nav-text">范围查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关键字：filter"><span class="nav-number">1.7.0.10.</span> <span class="nav-text">关键字：filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂查询"><span class="nav-number">1.7.0.11.</span> <span class="nav-text">复杂查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布尔查询：bool"><span class="nav-number">1.7.0.12.</span> <span class="nav-text">布尔查询：bool</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">1.8.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ElasticSearch-学习系列"><span class="nav-number">1.9.</span> <span class="nav-text">ElasticSearch 学习系列</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -944,6 +846,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
